@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Panda Bistro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./"><img class="brand-logo" src="panda-logo.png" alt="" width="44" height="40">Panda Bistro</a><nav aria-label="Main navigation"><a href="./">Home</a><a href="menu.html">Menu</a><a href="contact.html" aria-current="page">Contact</a><a class="button small" href="menu.html#menu">Order pickup</a></nav></header>
+  <main id="customer">
+    <section id="visit" class="section visit"><div><p class="eyebrow">Pick up &amp; dine in only · No delivery</p><h1>Contact</h1></div><div><h3>Location &amp; hours</h3><p>Lambertville, NJ</p><p class="muted">Street address, phone number and hours will be added before launch.</p></div></section>
+  </main>
+  <main id="kitchen" class="section" hidden>
+    <p class="eyebrow"><span class="zh" lang="zh-Hans">员工试用版</span><span class="en">Staff prototype</span></p>
+    <h1><span class="zh" lang="zh-Hans">自取订单</span><span class="en">Pickup orders</span></h1>
+    <p class="muted"><span class="zh" lang="zh-Hans">请保持此页面开启，以接收新订单。</span><span class="en">Leave this screen open to receive new orders.</span></p>
+    <div class="staff-actions"><button class="button" id="sound"></button><button id="silence" hidden></button><button id="pause"></button></div>
+    <div id="orders" aria-live="polite"></div>
+  </main>
+  <footer><strong>Panda Bistro</strong><span>Prototype · No real orders or texts</span><button type="button" id="palette-toggle" aria-pressed="false">Original colors</button><a href="?view=kitchen">Staff</a></footer>
+  <dialog id="dialog"><div class="dialog-head"><h3 id="dialog-title">Pickup checkout</h3><button id="close" aria-label="Close checkout">×</button></div><div id="checkout-content"></div></dialog>
+</body>
+</html>

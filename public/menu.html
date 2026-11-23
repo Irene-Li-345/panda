@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu · Panda Bistro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./"><img class="brand-logo" src="panda-logo.png" alt="" width="44" height="40">Panda Bistro</a><nav aria-label="Main navigation"><a href="./">Home</a><a href="menu.html" aria-current="page">Menu</a><a href="contact.html">Contact</a><a class="button small" href="menu.html#menu">Order pickup</a></nav></header>
+  <main id="customer">
+    <section id="menu" class="menu section">
+      <p class="eyebrow">Order for pickup</p><h1>The menu</h1><p class="muted">Pick up &amp; dine in only · No delivery. Sample menu and prices.</p>
+      <div class="layout"><div><label class="search">Search the menu<input id="search" type="search" placeholder="Find a dish"></label><div id="filters" aria-label="Menu categories"></div><div id="dishes"></div></div>
+      <aside class="cart"><h3>Your order</h3><p class="muted">Pickup only · About 15 min</p><div id="cart-items"></div><div class="total"><span>Subtotal</span><strong id="total">$0.00</strong></div><p class="muted">$15 minimum for cards and Apple Pay.</p><button class="button" id="checkout" disabled>Continue to checkout</button></aside></div>
+    </section>
+  </main>
+  <main id="kitchen" class="section" hidden>
+    <p class="eyebrow"><span class="zh" lang="zh-Hans">员工试用版</span><span class="en">Staff prototype</span></p>
+    <h1><span class="zh" lang="zh-Hans">自取订单</span><span class="en">Pickup orders</span></h1>
+    <p class="muted"><span class="zh" lang="zh-Hans">请保持此页面开启，以接收新订单。</span><span class="en">Leave this screen open to receive new orders.</span></p>
+    <div class="staff-actions"><button class="button" id="sound"></button><button id="silence" hidden></button><button id="pause"></button></div>
+    <div id="orders" aria-live="polite"></div>
+  </main>
+  <footer><strong>Panda Bistro</strong><span>Prototype · No real orders or texts</span><button type="button" id="palette-toggle" aria-pressed="false">Original colors</button><a href="?view=kitchen">Staff</a></footer>
+  <dialog id="dialog"><div class="dialog-head"><h3 id="dialog-title">Pickup checkout</h3><button id="close" aria-label="Close checkout">×</button></div><div id="checkout-content"></div></dialog>
+</body>
+</html>
